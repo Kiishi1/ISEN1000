@@ -66,15 +66,24 @@ if __name__ == "__main__":
             print("Out of bounds") # Out of bounds.
             
         else:
-            cell = grid[curentRow][currentCol]
+            cell = grid[row][col]
             if cell == EMPTY:
-                grid[currentRow][currentCol] = VISITED
+                grid[row][col] = VISITED
                 
             elif cell == WALL:
                 done = True
                 print("Hit Wall") # Hit wall.
 
             elif cell == END:
+=======
+            if grid[row][col] == EMPTY:
+                grid[row][col] = VISITED
+                
+            elif grid[row][col] == WALL:
+                done = True
+                print("Hit Wall") # Hit wall.
+
+            elif grid[row][col] == END:
                 done = True
                 solved = True
                 print("Solved") # Solved.
