@@ -57,13 +57,13 @@ if __name__ == "__main__":
             currentCol -= 1
         
         else:
-            print("MESSAGE 1") # Invalid direction.
+            print("Invalid Direction") # Invalid direction.
         
         if (currentRow < 0 or currentCol < 0 
                         or currentRow >= len(grid) 
                         or currentCol >= len(grid[currentRow])):
             done = True
-            print("MESSAGE 2") # Out of bounds.
+            print("Out of bounds") # Out of bounds.
             
         else:
             if grid[currentRow][currentCol] == EMPTY:
@@ -71,12 +71,12 @@ if __name__ == "__main__":
                 
             elif grid[currentRow][currentCol] == WALL:
                 done = True
-                print("MESSAGE 3") # Hit wall.
+                print("Hit Wall") # Hit wall.
 
             elif grid[currentRow][currentCol] == END:
                 done = True
                 solved = True
-                print("MESSAGE 4") # Solved.
+                print("Solved") # Solved.
                 
             else:
                 pass # Do nothing
@@ -86,6 +86,6 @@ if __name__ == "__main__":
 
 
     if not solved:
-        print("MESSAGE 5") # Did not reach the end.
+        print("Did not reach the end") # Did not reach the end.
 
         Viewer.view(grid)
