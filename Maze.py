@@ -1,4 +1,4 @@
-import GridViewer
+import Viewer
 
 EMPTY = 0
 WALL = 1
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     ]
                     
     for i in range(len(grid)):
-        GridViewer.view(grid)
+        Viewer.view(grid)
 
     print("Find a solution to get from ^^ to $$, using the characters " 
         + "'" + NORTH + "', '" + EAST + "', '" + SOUTH + "' and '" + WEST + "'"
@@ -88,4 +88,4 @@ if __name__ == "__main__":
     if not solved:
         print("MESSAGE 5") # Did not reach the end.
 
-        GridViewer.view(grid)
+        Viewer.view(grid)
